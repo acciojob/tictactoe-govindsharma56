@@ -1,8 +1,8 @@
 //your JS code here. If required.
 	let cells=document.querySelectorAll('.cell');
 function game(){
-let player1=document.querySelector('#player-1').value;
-let player2=document.querySelector('#player-2').value;
+let player1=document.querySelector('#player1').value;
+let player2=document.querySelector('#player2').value;
 	 if(player1=="" || player2==""){
 		  alert('missing name');
 		 return;
@@ -25,8 +25,8 @@ function play(event){
     return;
      }
 	let turn=document.querySelector('.message')
-	let player1=document.querySelector('#player-1').value;
-    let player2=document.querySelector('#player-2').value;
+	let player1=document.querySelector('#player1').value;
+    let player2=document.querySelector('#player2').value;
 	let cell=event.target;
 	  if(cell.innerText!==""){
 		  return;
@@ -52,8 +52,8 @@ function play(event){
   }
 function checkWinner() {
 	let turn = document.querySelector(".message");
-	 let player1 = document.querySelector("#player-1").value;
-    let player2 = document.querySelector("#player-2").value;
+	 let player1 = document.querySelector("#player1").value;
+    let player2 = document.querySelector("#player2").value;
     if(
         cells[0].innerText==='X' && cells[1].innerText==='X' && cells[2].innerText==='X' ||
         cells[3].innerText==='X' && cells[4].innerText==='X' && cells[5].innerText==='X' ||

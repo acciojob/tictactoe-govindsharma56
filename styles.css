@@ -2,12 +2,12 @@
 .container{
 	text-align:center;
 }
-#player-1{
+#player1{
 	margin-bottom:15px;
 	border-color:black;
 	height:20px;
 }
-#player-2{
+#player2{
 	margin-bottom:15px;
 	border-color:black;
 	height:20px;
