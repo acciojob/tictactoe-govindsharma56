@@ -19,7 +19,7 @@ let player2=document.querySelector('#player2').value;
       }	 
 }
 
-	let currentPlayer="X";
+	let currentPlayer="x";
     let gameOver = false;
 function play(event){
 	
@@ -44,14 +44,14 @@ function play(event){
 	   
 	cell.style='align-items:center';
 	 
-	    if(currentPlayer==='X'){
+	    if(currentPlayer==='x'){
 			 turn.innerText=`${player2}, you're up`;
-			currentPlayer="O";
+			currentPlayer="o";
 			 
          }
 	     else{
 			 turn.innerText=`${player1}, you're up`;
-			 currentPlayer="X";
+			 currentPlayer="x";
             }
   }
 function checkWinner() {
@@ -59,18 +59,18 @@ function checkWinner() {
 	 let player1 = document.querySelector("#player1").value;
     let player2 = document.querySelector("#player2").value;
     if(
-        cells[0].innerText==='X' && cells[1].innerText==='X' && cells[2].innerText==='X' ||
-        cells[3].innerText==='X' && cells[4].innerText==='X' && cells[5].innerText==='X' ||
-        cells[6].innerText==='X' && cells[7].innerText==='X' && cells[8].innerText==='X' ||
-        cells[0].innerText==='X' && cells[4].innerText==='X' && cells[8].innerText==='X' ||
-        cells[2].innerText==='X' && cells[4].innerText==='X' && cells[6].innerText==='X' ||
-        cells[0].innerText==='X' && cells[3].innerText==='X' && cells[6].innerText==='X' ||
-        cells[1].innerText==='X' && cells[4].innerText==='X' && cells[7].innerText==='X' ||
-        cells[2].innerText==='X' && cells[5].innerText==='X' && cells[8].innerText==='X'
+        cells[0].innerText==='x' && cells[1].innerText==='x' && cells[2].innerText==='x' ||
+        cells[3].innerText==='x' && cells[4].innerText==='x' && cells[5].innerText==='x' ||
+        cells[6].innerText==='x' && cells[7].innerText==='x' && cells[8].innerText==='x' ||
+        cells[0].innerText==='x' && cells[4].innerText==='x' && cells[8].innerText==='x' ||
+        cells[2].innerText==='x' && cells[4].innerText==='x' && cells[6].innerText==='x' ||
+        cells[0].innerText==='x' && cells[3].innerText==='x' && cells[6].innerText==='x' ||
+        cells[1].innerText==='x' && cells[4].innerText==='x' && cells[7].innerText==='x' ||
+        cells[2].innerText==='x' && cells[5].innerText==='x' && cells[8].innerText==='x'
     )
     {
 
-        if(cells[0].innerText==='X' && cells[1].innerText==='X' && cells[2].innerText==='X'){
+        if(cells[0].innerText==='x' && cells[1].innerText==='x' && cells[2].innerText==='x'){
             cells[0].classList.add("winner");
             cells[1].classList.add("winner");
             cells[2].classList.add("winner");
@@ -79,7 +79,7 @@ function checkWinner() {
 			return;
         }
 
-        else if(cells[3].innerText==='X' && cells[4].innerText==='X' && cells[5].innerText==='X'){
+        else if(cells[3].innerText==='x' && cells[4].innerText==='x' && cells[5].innerText==='x'){
             cells[3].classList.add("winner");
             cells[4].classList.add("winner");
             cells[5].classList.add("winner");
@@ -89,7 +89,7 @@ function checkWinner() {
 			return;
         }
 
-        else if(cells[6].innerText==='X' && cells[7].innerText==='X' && cells[8].innerText==='X'){
+        else if(cells[6].innerText==='x' && cells[7].innerText==='x' && cells[8].innerText==='x'){
             cells[6].classList.add("winner");
             cells[7].classList.add("winner");
             cells[8].classList.add("winner");
@@ -99,7 +99,7 @@ function checkWinner() {
 			return;
         }
 
-        else if(cells[0].innerText==='X' && cells[4].innerText==='X' && cells[8].innerText==='X'){
+        else if(cells[0].innerText==='x' && cells[4].innerText==='x' && cells[8].innerText==='x'){
             cells[0].classList.add("winner");
             cells[4].classList.add("winner");
             cells[8].classList.add("winner");
@@ -109,7 +109,7 @@ function checkWinner() {
 			return;
         }
 
-        else if(cells[2].innerText==='X' && cells[4].innerText==='X' && cells[6].innerText==='X'){
+        else if(cells[2].innerText==='x' && cells[4].innerText==='x' && cells[6].innerText==='x'){
             cells[2].classList.add("winner");
             cells[4].classList.add("winner");
             cells[6].classList.add("winner");
@@ -119,7 +119,7 @@ function checkWinner() {
 			return;
         }
 
-        else if(cells[0].innerText==='X' && cells[3].innerText==='X' && cells[6].innerText==='X'){
+        else if(cells[0].innerText==='x' && cells[3].innerText==='x' && cells[6].innerText==='x'){
             cells[0].classList.add("winner");
             cells[3].classList.add("winner");
             cells[6].classList.add("winner");
@@ -129,7 +129,7 @@ function checkWinner() {
 			return;
         }
 
-        else if(cells[1].innerText==='X' && cells[4].innerText==='X' && cells[7].innerText==='X'){
+        else if(cells[1].innerText==='x' && cells[4].innerText==='x' && cells[7].innerText==='x'){
             cells[1].classList.add("winner");
             cells[4].classList.add("winner");
             cells[7].classList.add("winner");
@@ -139,7 +139,7 @@ function checkWinner() {
 			return;
         }
 
-        else if(cells[2].innerText==='X' && cells[5].innerText==='X' && cells[8].innerText==='X'){
+        else if(cells[2].innerText==='x' && cells[5].innerText==='x' && cells[8].innerText==='x'){
             cells[2].classList.add("winner");
             cells[5].classList.add("winner");
             cells[8].classList.add("winner");
@@ -153,18 +153,18 @@ function checkWinner() {
 
 
     else if(
-        cells[0].innerText==='O' && cells[1].innerText==='O' && cells[2].innerText==='O' ||
-        cells[3].innerText==='O' && cells[4].innerText==='O' && cells[5].innerText==='O' ||
-        cells[6].innerText==='O' && cells[7].innerText==='O' && cells[8].innerText==='O' ||
-        cells[0].innerText==='O' && cells[4].innerText==='O' && cells[8].innerText==='O' ||
-        cells[2].innerText==='O' && cells[4].innerText==='O' && cells[6].innerText==='O' ||
-        cells[0].innerText==='O' && cells[3].innerText==='O' && cells[6].innerText==='O' ||
-        cells[1].innerText==='O' && cells[4].innerText==='O' && cells[7].innerText==='O' ||
-        cells[2].innerText==='O' && cells[5].innerText==='O' && cells[8].innerText==='O'
+        cells[0].innerText==='o' && cells[1].innerText==='o' && cells[2].innerText==='o' ||
+        cells[3].innerText==='o' && cells[4].innerText==='o' && cells[5].innerText==='o' ||
+        cells[6].innerText==='o' && cells[7].innerText==='o' && cells[8].innerText==='o' ||
+        cells[0].innerText==='o' && cells[4].innerText==='o' && cells[8].innerText==='o' ||
+        cells[2].innerText==='o' && cells[4].innerText==='o' && cells[6].innerText==='o' ||
+        cells[0].innerText==='o' && cells[3].innerText==='o' && cells[6].innerText==='o' ||
+        cells[1].innerText==='o' && cells[4].innerText==='o' && cells[7].innerText==='o' ||
+        cells[2].innerText==='o' && cells[5].innerText==='o' && cells[8].innerText==='o'
     )
     {
 
-        if(cells[0].innerText==='O' && cells[1].innerText==='O' && cells[2].innerText==='O'){
+        if(cells[0].innerText==='o' && cells[1].innerText==='o' && cells[2].innerText==='o'){
             cells[0].classList.add("winner");
             cells[1].classList.add("winner");
             cells[2].classList.add("winner");
@@ -173,7 +173,7 @@ function checkWinner() {
 			return;
         }
 
-        else if(cells[3].innerText==='O' && cells[4].innerText==='O' && cells[5].innerText==='O'){
+        else if(cells[3].innerText==='o' && cells[4].innerText==='o' && cells[5].innerText==='o'){
             cells[3].classList.add("winner");
             cells[4].classList.add("winner");
             cells[5].classList.add("winner");
@@ -183,7 +183,7 @@ function checkWinner() {
 			
         }
 
-        else if(cells[6].innerText==='O' && cells[7].innerText==='O' && cells[8].innerText==='O'){
+        else if(cells[6].innerText==='o' && cells[7].innerText==='o' && cells[8].innerText==='o'){
             cells[6].classList.add("winner");
             cells[7].classList.add("winner");
             cells[8].classList.add("winner");
@@ -192,7 +192,7 @@ function checkWinner() {
 			return;
         }
 
-        else if(cells[0].innerText==='O' && cells[4].innerText==='O' && cells[8].innerText==='O'){
+        else if(cells[0].innerText==='o' && cells[4].innerText==='o' && cells[8].innerText==='o'){
             cells[0].classList.add("winner");
             cells[4].classList.add("winner");
             cells[8].classList.add("winner");
@@ -201,7 +201,7 @@ function checkWinner() {
 			return;
         }
 
-        else if(cells[2].innerText==='O' && cells[4].innerText==='O' && cells[6].innerText==='O'){
+        else if(cells[2].innerText==='o' && cells[4].innerText==='o' && cells[6].innerText==='o'){
             cells[2].classList.add("winner");
             cells[4].classList.add("winner");
             cells[6].classList.add("winner");
@@ -210,7 +210,7 @@ function checkWinner() {
 			return;
         }
 
-        else if(cells[0].innerText==='O' && cells[3].innerText==='O' && cells[6].innerText==='O'){
+        else if(cells[0].innerText==='o' && cells[3].innerText==='o' && cells[6].innerText==='o'){
             cells[0].classList.add("winner");
             cells[3].classList.add("winner");
             cells[6].classList.add("winner");
@@ -219,7 +219,7 @@ function checkWinner() {
 			return;
         }
 
-        else if(cells[1].innerText==='O' && cells[4].innerText==='O' && cells[7].innerText==='O'){
+        else if(cells[1].innerText==='o' && cells[4].innerText==='o' && cells[7].innerText==='o'){
             cells[1].classList.add("winner");
             cells[4].classList.add("winner");
             cells[7].classList.add("winner");
@@ -228,7 +228,7 @@ function checkWinner() {
 			return;
         }
 
-        else if(cells[2].innerText==='O' && cells[5].innerText==='O' && cells[8].innerText==='O'){
+        else if(cells[2].innerText==='o' && cells[5].innerText==='o' && cells[8].innerText==='o'){
             cells[2].classList.add("winner");
             cells[5].classList.add("winner");
             cells[8].classList.add("winner");
