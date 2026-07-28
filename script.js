@@ -75,7 +75,7 @@ function checkWinner() {
             cells[1].classList.add("winner");
             cells[2].classList.add("winner");
 			gameOver=true;
-			turn.innerText = `${player1}, Congratulations you won!`;
+			turn.innerText = `${player1} congratulations you won!`;
 			return;
         }
 
@@ -85,7 +85,7 @@ function checkWinner() {
             cells[5].classList.add("winner");
 			gameOver=true;
 			
-			turn.innerText = `${player1}, Congratulations you won!`;
+			turn.innerText = `${player1} congratulations you won!`;
 			return;
         }
 
@@ -95,7 +95,7 @@ function checkWinner() {
             cells[8].classList.add("winner");
 			gameOver=true;
 			
-			turn.innerText = `${player1}, Congratulations you won!`;
+			turn.innerText = `${player1} congratulations you won!`;
 			return;
         }
 
@@ -105,7 +105,7 @@ function checkWinner() {
             cells[8].classList.add("winner");
 			gameOver=true;
 			
-			turn.innerText = `${player1}, Congratulations you won!`;
+			turn.innerText = `${player1} congratulations you won!`;
 			return;
         }
 
@@ -115,7 +115,7 @@ function checkWinner() {
             cells[6].classList.add("winner");
 			gameOver=true;
 			
-			turn.innerText = `${player1}, Congratulations you won!`;
+			turn.innerText = `${player1} congratulations you won!`;
 			return;
         }
 
@@ -125,7 +125,7 @@ function checkWinner() {
             cells[6].classList.add("winner");
 			gameOver=true;
 			
-			turn.innerText = `${player1}, Congratulations you won!`;
+			turn.innerText = `${player1} congratulations you won!`;
 			return;
         }
 
@@ -135,7 +135,7 @@ function checkWinner() {
             cells[7].classList.add("winner");
 			gameOver=true;
 			
-			turn.innerText = `${player1}, Congratulations you won!`;
+			turn.innerText = `${player1} congratulations you won!`;
 			return;
         }
 
@@ -145,7 +145,7 @@ function checkWinner() {
             cells[8].classList.add("winner");
 			gameOver=true;
 			
-			turn.innerText = `${player1},Congratulations you won!`;
+			turn.innerText = `${player1} congratulations you won!`;
 			return;
         }
 
@@ -169,7 +169,7 @@ function checkWinner() {
             cells[1].classList.add("winner");
             cells[2].classList.add("winner");
 			gameOver=true;
-			turn.innerText = `${player2},Congratulations you won!`;
+			turn.innerText = `${player2} congratulations you won!`;
 			return;
         }
 
@@ -178,7 +178,7 @@ function checkWinner() {
             cells[4].classList.add("winner");
             cells[5].classList.add("winner");
 			gameOver=true;
-			turn.innerText = `${player2},Congratulations you won!`;
+			turn.innerText = `${player2} congratulations you won!`;
 			return;
 			
         }
@@ -188,7 +188,7 @@ function checkWinner() {
             cells[7].classList.add("winner");
             cells[8].classList.add("winner");
 			gameOver=true;
-			turn.innerText = `${player2},Congratulations you won!`;
+			turn.innerText = `${player2} congratulations you won!`;
 			return;
         }
 
@@ -197,7 +197,7 @@ function checkWinner() {
             cells[4].classList.add("winner");
             cells[8].classList.add("winner");
 			gameOver=true;
-			turn.innerText = `${player2},Congratulations you won!`;
+			turn.innerText = `${player2} congratulations you won!`;
 			return;
         }
 
@@ -206,7 +206,7 @@ function checkWinner() {
             cells[4].classList.add("winner");
             cells[6].classList.add("winner");
 			gameOver=true;
-			turn.innerText = `${player2},Congratulations you won!`;
+			turn.innerText = `${player2} congratulations you won!`;
 			return;
         }
 
@@ -215,7 +215,7 @@ function checkWinner() {
             cells[3].classList.add("winner");
             cells[6].classList.add("winner");
 			gameOver=true;
-			turn.innerText = `${player2},Congratulations you won!`;
+			turn.innerText = `${player2} congratulations you won!`;
 			return;
         }
 
@@ -224,7 +224,7 @@ function checkWinner() {
             cells[4].classList.add("winner");
             cells[7].classList.add("winner");
 			gameOver=true;
-			turn.innerText = `${player2},Congratulations you won!`;
+			turn.innerText = `${player2} congratulations you won!`;
 			return;
         }
 
@@ -233,7 +233,7 @@ function checkWinner() {
             cells[5].classList.add("winner");
             cells[8].classList.add("winner");
 			gameOver=true;
-			turn.innerText = `${player2},Congratulations you won!`;
+			turn.innerText = `${player2} congratulations you won!`;
 			return;
         }
 		
