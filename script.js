@@ -10,6 +10,9 @@ let player2=document.querySelector('#player2').value;
 	document.getElementById("form-page").style.display = "none";
 	document.getElementById("submit").style.display = "none";
 	document.querySelector(".game-board").style.display = "block";
+	
+	let turn=document.querySelector('.message')
+	turn.innerText=`${player1}, you're up`
 
 	   for(let i=0;i<cells.length;i++){
 		   cells[i].addEventListener('click',play);
@@ -21,16 +24,17 @@ let player2=document.querySelector('#player2').value;
 function play(event){
 	
 	if(gameOver){
-		
     return;
      }
 	let turn=document.querySelector('.message')
 	let player1=document.querySelector('#player1').value;
     let player2=document.querySelector('#player2').value;
 	let cell=event.target;
+	
 	  if(cell.innerText!==""){
 		  return;
        }
+	    turn.innerText=`${player1}, you're up`
 	   cell.innerText=currentPlayer;
 	    checkWinner();
 	
@@ -41,12 +45,12 @@ function play(event){
 	cell.style='align-items:center';
 	 
 	    if(currentPlayer==='X'){
-			 turn.innerText=`${player2},you're up`;
+			 turn.innerText=`${player2}, you're up`;
 			currentPlayer="O";
 			 
          }
 	     else{
-			 turn.innerText=`${player1},you're up`;
+			 turn.innerText=`${player1}, you're up`;
 			 currentPlayer="X";
             }
   }
@@ -71,7 +75,7 @@ function checkWinner() {
             cells[1].classList.add("winner");
             cells[2].classList.add("winner");
 			gameOver=true;
-			turn.innerText = `${player1},Congratulations you won!`;
+			turn.innerText = `${player1}, Congratulations you won!`;
 			return;
         }
 
@@ -81,7 +85,7 @@ function checkWinner() {
             cells[5].classList.add("winner");
 			gameOver=true;
 			
-			turn.innerText = `${player1},Congratulations you won!`;
+			turn.innerText = `${player1}, Congratulations you won!`;
 			return;
         }
 
@@ -91,7 +95,7 @@ function checkWinner() {
             cells[8].classList.add("winner");
 			gameOver=true;
 			
-			turn.innerText = `${player1},Congratulations you won!`;
+			turn.innerText = `${player1}, Congratulations you won!`;
 			return;
         }
 
@@ -101,7 +105,7 @@ function checkWinner() {
             cells[8].classList.add("winner");
 			gameOver=true;
 			
-			turn.innerText = `${player1},Congratulations you won!`;
+			turn.innerText = `${player1}, Congratulations you won!`;
 			return;
         }
 
@@ -111,7 +115,7 @@ function checkWinner() {
             cells[6].classList.add("winner");
 			gameOver=true;
 			
-			turn.innerText = `${player1},Congratulations you won!`;
+			turn.innerText = `${player1}, Congratulations you won!`;
 			return;
         }
 
@@ -121,7 +125,7 @@ function checkWinner() {
             cells[6].classList.add("winner");
 			gameOver=true;
 			
-			turn.innerText = `${player1},Congratulations you won!`;
+			turn.innerText = `${player1}, Congratulations you won!`;
 			return;
         }
 
@@ -131,7 +135,7 @@ function checkWinner() {
             cells[7].classList.add("winner");
 			gameOver=true;
 			
-			turn.innerText = `${player1},Congratulations you won!`;
+			turn.innerText = `${player1}, Congratulations you won!`;
 			return;
         }
 
