@@ -34,6 +34,7 @@ function play(event){
 	  if(cell.innerText!==""){
 		  return;
        }
+	    turn.innerText=`${player1}, you're up`;
 	   cell.innerText=currentPlayer;
 	    checkWinner();
 	
