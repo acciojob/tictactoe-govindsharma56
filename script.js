@@ -34,7 +34,7 @@ function play(event){
 	  if(cell.innerText!==""){
 		  return;
        }
-	    turn.innerText=`${player1}, you're up`;
+
 	   cell.innerText=currentPlayer;
 	    checkWinner();
 	
@@ -42,7 +42,7 @@ function play(event){
         return;
     }
 	   
-	cell.style='align-items:center';
+	cell.style.alignItems = "center";
 	 
 	    if(currentPlayer==='x'){
 			 turn.innerText=`${player2}, you're up`;
