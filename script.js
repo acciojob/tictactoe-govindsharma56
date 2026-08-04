@@ -1,243 +1,98 @@
-//your JS code here. If required.
-	let cells=document.querySelectorAll('.cell');
-function game(){
-let player1=document.querySelector('#player1').value;
-let player2=document.querySelector('#player2').value;
-	 if(player1=="" || player2==""){
-		  alert('missing name');
-		 return;
-      }
-	document.getElementById("form-page").style.display = "none";
-	document.getElementById("submit").style.display = "none";
-	document.querySelector(".game-board").style.display = "block";
-	
-	let turn=document.querySelector('.message')
-	turn.innerText=`${player1}, you're up`
+let cells = document.querySelectorAll(".cell");
 
-	   for(let i=0;i<cells.length;i++){
-		   cells[i].addEventListener('click',play);
-      }	 
-}
+let currentPlayer = "x";
+let gameOver = false;
 
-	let currentPlayer="x";
-    let gameOver = false;
-function play(event){
-	
-	if(gameOver){
-    return;
-     }
-	let turn=document.querySelector('.message')
-	let player1=document.querySelector('#player1').value;
-    let player2=document.querySelector('#player2').value;
-	let cell=event.target;
-	
-	  if(cell.innerText!==""){
-		  return;
-       }
+function game() {
+    let player1 = document.querySelector("#player1").value;
+    let player2 = document.querySelector("#player2").value;
 
-	   cell.innerText=currentPlayer;
-	    checkWinner();
-	
-    if(gameOver){
+    if (player1 === "" || player2 === "") {
+        alert("missing name");
         return;
     }
-	   
-	cell.style.alignItems = "center";
-	 
-	    if(currentPlayer==='x'){
-			 turn.innerText=`${player2}, you're up`;
-			currentPlayer="o";
-			 
-         }
-	     else{
-			 turn.innerText=`${player1}, you're up`;
-			 currentPlayer="x";
-            }
-  }
-function checkWinner() {
-	let turn = document.querySelector(".message");
-	 let player1 = document.querySelector("#player1").value;
-    let player2 = document.querySelector("#player2").value;
-    if(
-        cells[0].innerText==='x' && cells[1].innerText==='x' && cells[2].innerText==='x' ||
-        cells[3].innerText==='x' && cells[4].innerText==='x' && cells[5].innerText==='x' ||
-        cells[6].innerText==='x' && cells[7].innerText==='x' && cells[8].innerText==='x' ||
-        cells[0].innerText==='x' && cells[4].innerText==='x' && cells[8].innerText==='x' ||
-        cells[2].innerText==='x' && cells[4].innerText==='x' && cells[6].innerText==='x' ||
-        cells[0].innerText==='x' && cells[3].innerText==='x' && cells[6].innerText==='x' ||
-        cells[1].innerText==='x' && cells[4].innerText==='x' && cells[7].innerText==='x' ||
-        cells[2].innerText==='x' && cells[5].innerText==='x' && cells[8].innerText==='x'
-    )
-    {
 
-        if(cells[0].innerText==='x' && cells[1].innerText==='x' && cells[2].innerText==='x'){
-            cells[0].classList.add("winner");
-            cells[1].classList.add("winner");
-            cells[2].classList.add("winner");
-			gameOver=true;
-			turn.innerText = `${player1} congratulations you won!`;
-			return;
-        }
+    document.getElementById("form-page").style.display = "none";
+    document.getElementById("submit").style.display = "none";
+    document.querySelector(".game-board").style.display = "block";
 
-        else if(cells[3].innerText==='x' && cells[4].innerText==='x' && cells[5].innerText==='x'){
-            cells[3].classList.add("winner");
-            cells[4].classList.add("winner");
-            cells[5].classList.add("winner");
-			gameOver=true;
-			
-			turn.innerText = `${player1} congratulations you won!`;
-			return;
-        }
+    document.querySelector(".message").innerText = `${player1}, you're up`;
 
-        else if(cells[6].innerText==='x' && cells[7].innerText==='x' && cells[8].innerText==='x'){
-            cells[6].classList.add("winner");
-            cells[7].classList.add("winner");
-            cells[8].classList.add("winner");
-			gameOver=true;
-			
-			turn.innerText = `${player1} congratulations you won!`;
-			return;
-        }
-
-        else if(cells[0].innerText==='x' && cells[4].innerText==='x' && cells[8].innerText==='x'){
-            cells[0].classList.add("winner");
-            cells[4].classList.add("winner");
-            cells[8].classList.add("winner");
-			gameOver=true;
-			
-			turn.innerText = `${player1} congratulations you won!`;
-			return;
-        }
-
-        else if(cells[2].innerText==='x' && cells[4].innerText==='x' && cells[6].innerText==='x'){
-            cells[2].classList.add("winner");
-            cells[4].classList.add("winner");
-            cells[6].classList.add("winner");
-			gameOver=true;
-			
-			turn.innerText = `${player1} congratulations you won!`;
-			return;
-        }
-
-        else if(cells[0].innerText==='x' && cells[3].innerText==='x' && cells[6].innerText==='x'){
-            cells[0].classList.add("winner");
-            cells[3].classList.add("winner");
-            cells[6].classList.add("winner");
-			gameOver=true;
-			
-			turn.innerText = `${player1} congratulations you won!`;
-			return;
-        }
-
-        else if(cells[1].innerText==='x' && cells[4].innerText==='x' && cells[7].innerText==='x'){
-            cells[1].classList.add("winner");
-            cells[4].classList.add("winner");
-            cells[7].classList.add("winner");
-			gameOver=true;
-			
-			turn.innerText = `${player1} congratulations you won!`;
-			return;
-        }
-
-        else if(cells[2].innerText==='x' && cells[5].innerText==='x' && cells[8].innerText==='x'){
-            cells[2].classList.add("winner");
-            cells[5].classList.add("winner");
-            cells[8].classList.add("winner");
-			gameOver=true;
-			
-			turn.innerText = `${player1} congratulations you won!`;
-			return;
-        }
-
-    }
-
-
-    else if(
-        cells[0].innerText==='o' && cells[1].innerText==='o' && cells[2].innerText==='o' ||
-        cells[3].innerText==='o' && cells[4].innerText==='o' && cells[5].innerText==='o' ||
-        cells[6].innerText==='o' && cells[7].innerText==='o' && cells[8].innerText==='o' ||
-        cells[0].innerText==='o' && cells[4].innerText==='o' && cells[8].innerText==='o' ||
-        cells[2].innerText==='o' && cells[4].innerText==='o' && cells[6].innerText==='o' ||
-        cells[0].innerText==='o' && cells[3].innerText==='o' && cells[6].innerText==='o' ||
-        cells[1].innerText==='o' && cells[4].innerText==='o' && cells[7].innerText==='o' ||
-        cells[2].innerText==='o' && cells[5].innerText==='o' && cells[8].innerText==='o'
-    )
-    {
-
-        if(cells[0].innerText==='o' && cells[1].innerText==='o' && cells[2].innerText==='o'){
-            cells[0].classList.add("winner");
-            cells[1].classList.add("winner");
-            cells[2].classList.add("winner");
-			gameOver=true;
-			turn.innerText = `${player2} congratulations you won!`;
-			return;
-        }
-
-        else if(cells[3].innerText==='o' && cells[4].innerText==='o' && cells[5].innerText==='o'){
-            cells[3].classList.add("winner");
-            cells[4].classList.add("winner");
-            cells[5].classList.add("winner");
-			gameOver=true;
-			turn.innerText = `${player2} congratulations you won!`;
-			return;
-			
-        }
-
-        else if(cells[6].innerText==='o' && cells[7].innerText==='o' && cells[8].innerText==='o'){
-            cells[6].classList.add("winner");
-            cells[7].classList.add("winner");
-            cells[8].classList.add("winner");
-			gameOver=true;
-			turn.innerText = `${player2} congratulations you won!`;
-			return;
-        }
-
-        else if(cells[0].innerText==='o' && cells[4].innerText==='o' && cells[8].innerText==='o'){
-            cells[0].classList.add("winner");
-            cells[4].classList.add("winner");
-            cells[8].classList.add("winner");
-			gameOver=true;
-			turn.innerText = `${player2} congratulations you won!`;
-			return;
-        }
-
-        else if(cells[2].innerText==='o' && cells[4].innerText==='o' && cells[6].innerText==='o'){
-            cells[2].classList.add("winner");
-            cells[4].classList.add("winner");
-            cells[6].classList.add("winner");
-			gameOver=true;
-			turn.innerText = `${player2} congratulations you won!`;
-			return;
-        }
-
-        else if(cells[0].innerText==='o' && cells[3].innerText==='o' && cells[6].innerText==='o'){
-            cells[0].classList.add("winner");
-            cells[3].classList.add("winner");
-            cells[6].classList.add("winner");
-			gameOver=true;
-			turn.innerText = `${player2} congratulations you won!`;
-			return;
-        }
-
-        else if(cells[1].innerText==='o' && cells[4].innerText==='o' && cells[7].innerText==='o'){
-            cells[1].classList.add("winner");
-            cells[4].classList.add("winner");
-            cells[7].classList.add("winner");
-			gameOver=true;
-			turn.innerText = `${player2} congratulations you won!`;
-			return;
-        }
-
-        else if(cells[2].innerText==='o' && cells[5].innerText==='o' && cells[8].innerText==='o'){
-            cells[2].classList.add("winner");
-            cells[5].classList.add("winner");
-            cells[8].classList.add("winner");
-			gameOver=true;
-			turn.innerText = `${player2} congratulations you won!`;
-			return;
-        }
-		
-    }
-
+    cells.forEach(cell => {
+        cell.addEventListener("click", play);
+    });
 }
 
+function play(event) {
+
+    if (gameOver) return;
+
+    let player1 = document.querySelector("#player1").value;
+    let player2 = document.querySelector("#player2").value;
+
+    let turn = document.querySelector(".message");
+    let cell = event.target;
+
+    if (cell.innerText !== "") return;
+
+    cell.innerText = currentPlayer;
+
+    checkWinner();
+
+    if (gameOver) return;
+
+    if (currentPlayer === "x") {
+        currentPlayer = "o";
+        turn.innerText = `${player2}, you're up`;
+    } else {
+        currentPlayer = "x";
+        turn.innerText = `${player1}, you're up`;
+    }
+}
+
+function checkWinner() {
+
+    const turn = document.querySelector(".message");
+
+    const player1 = document.querySelector("#player1").value;
+    const player2 = document.querySelector("#player2").value;
+
+    const wins = [
+        [0,1,2],
+        [3,4,5],
+        [6,7,8],
+        [0,3,6],
+        [1,4,7],
+        [2,5,8],
+        [0,4,8],
+        [2,4,6]
+    ];
+
+    for (let combo of wins) {
+
+        let [a,b,c] = combo;
+
+        if (
+            cells[a].innerText !== "" &&
+            cells[a].innerText === cells[b].innerText &&
+            cells[b].innerText === cells[c].innerText
+        ) {
+
+            cells[a].classList.add("winner");
+            cells[b].classList.add("winner");
+            cells[c].classList.add("winner");
+
+            gameOver = true;
+
+            if (cells[a].innerText === "x") {
+                turn.innerText = `${player1} congratulations you won!`;
+            } else {
+                turn.innerText = `${player2} congratulations you won!`;
+            }
+
+            return true;
+        }
+    }
+
+    return false;
+}
